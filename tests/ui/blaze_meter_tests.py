@@ -2,11 +2,11 @@ import pytest
 import unittest
 
 from seleniumUi.drivers.browser import Browser
-from business.Test_Contexts.main_page_test_context import MainPageTestContext
-from business.Test_Contexts.registration_test_context import RegistrationTestContext
-from business.Test_Contexts.performance_testing_test_context import PerformanceTestingTestContext
-from business.Test_Contexts.unified_menu_test_context import UnifiedMenuTestContext
-from business.Test_Contexts.EditAccountTestContext import EditAccountTestContext
+from business.test_contexts.main_page_test_context import MainPageTestContext
+from business.test_contexts.registration_test_context import RegistrationTestContext
+from business.test_contexts.performance_testing_test_context import PerformanceTestingTestContext
+from business.test_contexts.unified_menu_test_context import UnifiedMenuTestContext
+from business.test_contexts.edit_account_test_context import EditAccountTestContext
 
 
 class BlazeMeter(unittest.TestCase):
