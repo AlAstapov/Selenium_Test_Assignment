@@ -7,8 +7,8 @@ class UnifiedMenu(BasePage):
         super().__init__(driver)
 
     def click_user_settings(self):
-        self._click_shadow_root_element(UnifiedMenuLocators.HEADER_LOCATOR[1], UnifiedMenuLocators.USER_SETTINGS[1])
+        self._click_shadow_root_element(UnifiedMenuLocators.HEADER_LOCATOR, UnifiedMenuLocators.USER_SETTINGS)
 
     def click_user_personal_settings(self):
         # Should be clicked after 'click user settings' method
-        self._click_shadow_root_element(UnifiedMenuLocators.HEADER_LOCATOR[1], UnifiedMenuLocators.USER_PERSONAL_SETTINGS[1])
+        self._click_shadow_root_element(UnifiedMenuLocators.HEADER_LOCATOR, UnifiedMenuLocators.USER_PERSONAL_SETTINGS)
