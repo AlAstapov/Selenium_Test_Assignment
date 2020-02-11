@@ -2,7 +2,6 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from business import config
-import time
 
 time_out_sec = config.time_out_sec
 
@@ -19,7 +18,6 @@ class BasePage(object):
         root_locator_value = root_locator[1]
         element_locator_value = element_locator[1]
 
-        # Som
         WebDriverWait(self.driver, time_out).until(EC.presence_of_element_located(root_locator))
         js_shadow_root_click = f"document.querySelector(\"{root_locator_value}\").shadowRoot.querySelector(\"{element_locator_value}\").click()"
         self.driver.execute_script(js_shadow_root_click)
