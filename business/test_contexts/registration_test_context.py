@@ -1,5 +1,6 @@
 from seleniumUi.pages.registration_window import RegistrationWindow
 from utilities.random_util import generate_random_str
+from business.items.user_registration_item import UserRegistrationItem
 
 
 class RegistrationTestContext:
@@ -15,11 +16,10 @@ class RegistrationTestContext:
 
     def register_random_user(self):
         random_part = generate_random_str()
-        self.registration_window.clear_and_fill_first_name(f"{random_part}FirstName")
-        self.registration_window.clear_and_fill_last_name(f"{random_part}LastName")
-        self.registration_window.clear_and_fill_email(f"{random_part}@mai.ru")
-        self.registration_window.clear_and_fill_company(f"{random_part}Company")
-        self.registration_window.click_register()
+        user = UserRegistrationItem(f"{random_part}FirstName", f"{random_part}LastName",
+                                    f"{random_part}@mai.ru", f"{random_part}Company")
+
+        self.register_user(user)
 
     def is_opened(self):
         return self.registration_window.is_opened()
